@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html {
+    font-size: 62.5%;
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+    height: 100%;
+}
+body {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    min-height: 480px;
+    grid-template-rows: 15% 50% 35%;
+    grid-auto-columns: minmax(320px, 100%);
+}
+header {
+    display: grid;
+    grid-template-columns: 243px;
+    grid-template-rows: 36px;
+    place-content: center;
+    background-color: #ffffff;
+}
+header div{
+    background-image: url('https://www.mydevice.io/assets/img/mydevice-logo.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+}
+main {
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: auto 183px auto;
+    grid-template-rows: 100%;
+    background-color: #5ccec0;
+}
+.main-img--container {
+    display: grid;
+    grid-template-columns: 40px;
+    grid-template-rows: 40px;
+    place-content: center;
+}
+.arrowLeft {
+    background-image: url('./assets/left-chevron-svgrepo-com.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.arrowRight {
+    background-image: url('./assets/right-chevron-svgrepo-com.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main-text--container {
+    padding: 40px 0;
+    text-align: center;
+}
+.main-text__up {
+    margin-bottom: 30px;
+    color: #222222;
+}
+.main-text__up .main-text__up {
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    font-weight: 400;
+}
+.main-text__up #extentWidth {
+    font-size: 4.8rem;
+    font-weight: bold;
+    line-height: 5.8rem;
+}
+.main-text__up #extentEm {
+    font-size: 2.4rem;
+    font-weight: 400;
+    line-height: 2.9rem;
+}
+.main-button {
+    font-size: 1.4rem;
+    font-weight: bold;
+    line-height: 1.4rem;
+    color: #4a4a4a;
+    padding: 15px 10px;
+    border: 1px solid #4a4a4a;
+    cursor: pointer;
+}
+.main-button:hover {
+    border: 1px solid #222222;
+    color: #222222;
+}
+footer {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    justify-content: center;
+    padding-top: 30px;
+    font-size: 2.8rem;
+    font-weight: 400;
+    color: #d1d1d1;
+    background-color: #595759;
+}
+
+@media (min-width: 576px) {
+    body {
+        grid-template-rows: 15% 70% 15%;
+    }
+    main {
+        grid-template-columns: auto 224.5px auto;
+        padding: 60px 30px;
+    }
+    .main-img--container {
+        grid-template-columns: 80px;
+        grid-template-rows: 80px;
+    }
+    .main-text__up .text{
+        font-size: 1.4rem;
+        margin-bottom: 10px;
+    }
+    .main-text__up #extentWidth {
+        font-size: 7.2rem;
+    }
+    .main-text__up #extentEm {
+        margin-top: 10px;
+        font-size: 3.6rem;
+        font-weight: 400;
+        line-height: 4.3rem;
+    }
+}
